@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+
+  <body class="m-4">
+<!-- Header Start -->
+    <header>
+        <section class="justify-content-between bg-primary-subtle p-4 d-flex rounded-3">
+            <div>
+                <div class="fs-2 fw-bold">Interactive</div>
+                <div class="fs-4 fw-semibold text-secondary">Geometry Genius</div>
+            </div>
+            <div class="p-6 mt-4">
+                <button type="button" class="btn btn-primary" id="btn-blog">Blog</button>
+            </div>
+        </section>
+    </header>
+
+<!-- Main Start Row 1 -->
+  <main>
+    <section class="container-fluid mt-5">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+          <div >
+            <div class="col" id="triangle">
+              <div class="card h-100" id="myDiv">
+                <img src="/triangle.png" class="card-img-top img-fluid w-50 mx-auto mt-4" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold fs-2" id="triangle-name">Triangle</h5>
+                  <h4>Area (A) = 0.5 * b * h</h4>
+                <div class="text-center">
+                    <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="b" id="triangle-b"><span class="m-1">cm</span> 
+                    <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="h" id="triangle-h"><span class="m-1">cm</span> 
+                </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" onclick="a" class="btn btn-primary w-75 mb-4" id="triangle-calculator">Calculator</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- Rectangle -->
+            <div class="col">
+              <div class="card h-100" id="myDivR">
+                <img src="/rectangle.png" class="card-img-top img-fluid w-50 mx-auto mt-4" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold fs-2" id="rectangler-name">Rectangle</h5>
+                    <h4 class="fw-semibold">Area (A) = w * l</h4>
+                  <div class="text-center">
+                      <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="w" id="rectangler-w"><span class="m-1">cm</span> 
+                      <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="l" id="rectangler-l"><span class="m-1">cm</span> 
+                  </div>
+                  </div>
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary w-75 mb-4" id="rectangle-calculator">Calculator</button>
+                  </div>
+              </div>
+            </div>
+<!-- Parallelogram -->
+            <div class="col">
+              <div class="card h-100" id="myDivP">
+                <img src="/parallelogram.png" class="card-img-top img-fluid w-50 mx-auto mt-4" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title fw-bold fs-2" id="parallelogram-name">Parallelogram</h5>
+                    <h4>Area (A) = b * h</h4>
+                    <div class="text-center">
+                      <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="b" id="parallelogram-b"><span class="m-1">cm</span> 
+                      <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="h" id="parallelogram-h"><span class="m-1">cm</span> 
+                  </div>                  </div>
+                  <div class="text-center">
+                      <button type="button" class="btn btn-primary w-75 mb-4" id="parallelogram-calculator">Calculator</button>
+                  </div>
+              </div>
+<!-- Area Calculation -->
+            </div>
+            <div class="col">
+              <div class="card h-100" id="area-calculator">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Area Calculator</h5>
+                  <hr>
+                  <table class="table text-center">
+                    <thead>
+                      <tr> 
+                        <th scope="col">Component</th>
+                        <th scope="col">Result</th>
+                        <th scope="col">Convert</th>
+                      </tr>
+                    </thead>
+                    <tbody  id="id-a">
+                   
+                    </tbody>
+                  </table>   
+                </div>
+                </div>
+              </div>
+          </div>
+    </section>
+
+<!-- Row 2 -->
+<!-- Rhombus -->
+    <section>
+        <section class="container-fluid mt-5">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                  <div class="card h-100" id="myDivRh">
+                    <img src="/rhombus.png" class="card-img-top img-fluid w-50 mx-auto mt-4" alt="...">
+                    <div class="card-body text-center">
+                      <h5 class="card-title fw-bold fs-2" id="rhombus-name">Rhombus</h5>
+                      <h4 class="fw-semibold">Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub></h4>
+                      <div class="text-center">
+                        <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="d1" id="rhombus-d1"><span class="m-1">cm</span> 
+                        <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="d2" id="rhombus-d2"><span class="m-1">cm</span> 
+                    </div> 
+                  </div>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-primary w-75 mb-4" id="rhombus-calculator">Calculator</button>
+                    </div>
+                  </div>
+                </div>
+<!-- Pentagon -->
+                <div class="col">
+                  <div class="card h-100" id="myDivPn">
+                    <img src="/pentagon.png" class="card-img-top img-fluid w-50 mx-auto mt-4" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-2" id="pentagon-name">Pentagon</h5>
+                        <h4 class="fw-semibold">Area (A) = 0.5 * p * b</h4>
+                        <div class="text-center">
+                          <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="p" id="pentagon-p"><span class="m-1">cm</span> 
+                          <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="b" id="pentagon-b"><span class="m-1">cm</span> 
+                      </div>
+                      </div>
+                      <div class="text-center">
+                          <button type="button" class="btn btn-primary w-75 mb-4" id="pentagon-calculator">Calculator</button>
+                      </div>
+                  </div>
+                </div>
+<!-- Ellipse -->
+                <div class="col">
+                  <div class="card h-100" id="myDivE">
+                    <img src="/ellipse.png" class="card-img-top img-fluid w-50 mx-auto mt-4" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold fs-2" id="ellipse-name">Ellipse</h5>
+                        <h4 class="fw-semibold">Area (A) = &#x3C0 ab</h4>
+                        <div class="text-center">
+                          <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="a" id="ellipse-a"><span class="m-1">cm</span> 
+                          <input type="text" class="w-25 ps-2 bg-success-subtle border-0" placeholder="b" id="ellipse-b"><span class="m-1">cm</span> 
+                      </div>
+                      </div>
+                      <div class="text-center">
+                          <button type="button" class="btn btn-primary w-75 mb-4"id="ellipse-calculator">Calculator</button>
+                      </div>
+                  </div>
+                </div>
+    </section>
+
+
+  </main>
+
+<!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="/rifat.js"></script>
+    <script src="/area.js"></script>
+    <script src="/resilt.js"></script>
+  </body>
+</html>
